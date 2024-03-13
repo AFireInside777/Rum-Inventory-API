@@ -2,7 +2,7 @@ alembic==1.13.1
 blinker==1.7.0
 click==8.1.7
 colorama==0.4.6
-Flask==3.0.2
+Flask==2.2.5
 Flask-Cors==4.0.0
 Flask-DotEnv==0.1.2
 Flask-Login==0.6.3
