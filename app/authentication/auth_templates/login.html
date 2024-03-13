@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    body {
+        background-image: url('/static/images/Bacardi.jpg');
+        background-position: 0px -5px;
+    }
+    main {
+        color: white;
+        margin-top: 35px;
+    }
+</style>
+<body>
+    <main class="container p-5">
+        <div class="row">
+            <aside class="col-md-6 col-12"> 
+                <h2>Login To Your Account</h2>
+                {% include 'forms.html' %}
+            </aside> 
+        </div>
+    </main>
+</body>
+{% endblock %}

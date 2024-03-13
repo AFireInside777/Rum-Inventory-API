@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    body {
+        background-image: url('/static/images/Cabinet.jpg')
+    }
+    .titlecard {
+        width: 350px;
+        margin: auto;
+        background-color: rgba(245, 245, 245, 0.737);
+        border-radius: 25px;
+        color: rgba(0, 0, 0, 0.87);
+    }
+    h4 {
+        font-size: 40px;
+    }
+    a {
+        font-size: 20px;
+    }
+    li {
+        color: white;
+    }
+</style>
+<body>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul class=flashes>
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+    {% block body %}{% endblock %}
+
+    <section style="padding-top: 20%; 
+    color: white;
+    text-align: center;
+    position: relative;
+    ">
+        <div class="titlecard">
+            <h4>Welcome to the Rum Inventory API!</h4>
+            <a>You can use the app to keep track of your Rum collection!</a>
+        </div>
+    </section>
+</body>
+{% endblock %}
