@@ -18,7 +18,7 @@ app.json_encoder = JSONEncoder
 db.init_app(app)
 login_manager.init_app(app)
 ma.init_app(app)
-migrate = Migrate(app, db)
+migrate = Migrate(app, db, compare_type=True)
 
 app.register_blueprint(site) #/home
 app.register_blueprint(auth) #signup
