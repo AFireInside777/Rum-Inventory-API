@@ -36,7 +36,8 @@ class User(db.Model, UserMixin):
         return secrets.token_hex(length)
     
     def set_password(self, password):
-        return generate_password_hash(password, salt_length=20)
+        self.pw_hash = generate_password_hash(password)
+        return self.pw_hash
     
     def __repr__(self):
         return f'User {self.email} has been added as a User for the app. They may login with their password.'
